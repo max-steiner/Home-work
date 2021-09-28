@@ -1,4 +1,5 @@
-
+#קלוט מספרים עד שתקלות מספר שלילי או 0 .הצג את ה ערך החיובי הנמוך ביותר שנקלט (יתכן שהנתון הראשון אינו חיובי).
+#Enter numbers until a negative number or 0 is displayed. Display the lowest positive value received (the first figure maybe not positive).
 
 n = input("Enter a number: ")
 i = 1
