@@ -1,5 +1,5 @@
 #קלוט מספרים עד שתקלות מספר שלילי או 0 .הצג את ה ערך החיובי הגבוה ביותר שנקלט (יתכן שהנתון הראשון אינו חיובי).
-#Enter numbers until a negative number or 0 is displayed. Display the highest positive value received (the first figure is not positive)
+#Enter numbers until a negative number or 0 is displayed. Display the highest positive value received (the first figure maybe not positive)
 
 
 n = input("Enter a number: ")
