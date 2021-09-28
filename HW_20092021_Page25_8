@@ -1,3 +1,5 @@
+
+
 n = input("Enter a number: ")
 i = 1
 lst = []
