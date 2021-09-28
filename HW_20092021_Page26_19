@@ -1,0 +1,10 @@
+#עצרת של מספר טבעי
+#factorial
+
+n = int(input("Enter an integer: "))
+factorial = 1
+
+for i in range(2, n + 1):
+    factorial *= i
+
+print(f"Factorial {n} is {factorial}")
