@@ -1,0 +1,14 @@
+n = input("Enter a number: ")
+i = 1
+lst = []
+
+if float(n) <= 0:
+    print("Program ended with no result")
+else:
+
+    while float(n) > 0:
+        i += 1
+        lst.append(float(n))
+        n = input("Enter a number: ")
+    result = min(lst)
+    print(f"Program ended. You  entered {i - 1} positive numbers. Minimum number: {result}")
