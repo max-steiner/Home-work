@@ -1,0 +1,8 @@
+#קלוט שלם והצג את סכום הספרות שלו
+#Enter an integer and display the sum of its digits
+
+n = list(input("Enter an integer: "))
+sum = 0
+for i, j in enumerate(n):
+    sum += int(j)
+print(f"The number you entered consists of {i + 1} digits, the sum of which is {sum}.")
