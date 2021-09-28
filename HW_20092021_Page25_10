@@ -1,3 +1,6 @@
+#קלוט שלם והצג את הםפרה השמאלית ביותר שלו
+#Enter integer and display its leftmost digit
+
 n = int(input("Enter an integer: "))
 m = 10
 
