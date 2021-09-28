@@ -1,0 +1,5 @@
+# של מספרכל המחלקים
+#divisors
+
+n = int(input("Enter a positive number: "))
+print(f" All divisors {n} are: {[s for s in range(1, (n+1)) if n % s == 0]}.")
