@@ -146,7 +146,7 @@ while attempt_result != counter_letters:
     print("\n" * 100)
     output_result(dash, result, score)
     if time.time() - start_time > time_limit:
-        print("אתה קצת טיפש אחי, חושב יותר מדי זמן אחי. התחל את המשחק מחדש")
+        print("אתה קצת טיפש אחי, חושב יותר מדי זמן. התחל את המשחק מחדש")
         print("#######################################################")
         sys.exit()
 
