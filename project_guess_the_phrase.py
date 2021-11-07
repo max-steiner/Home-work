@@ -47,8 +47,15 @@ def counter_letters(phrase):
     return num_letter
 
 
-def make_attempt(dash, phrase, num_attempt):
+def make_attempt(dash, phrase, num_attempt, old):
     attempt = input(f"Attempt № {num_attempt}. Please, enter a letter: ").strip().upper()
+    while attempt.isalpha() == False or len(attempt) != 1:
+        print("Input Error. Enter correct data")
+        attempt = input(f"Attempt № {num_attempt}. Please, enter a letter: ").strip().upper()
+    while attempt in old:
+        print("This letter has already been.")
+        attempt = input(f"Attempt № {num_attempt}. Please, enter a letter: ").strip().upper()
+    old = old.append(attempt)
     dash_old = dash
     for i, word in enumerate(phrase):
         for j, letter in enumerate(word):
@@ -84,7 +91,7 @@ def output_result(dash, result, score):
         print(" " * l, *dash, " " * l)
         print(f"##                                                   ##\n"
               f"##                Score in the game: {str(score).ljust(3)}             ##\n"
-              f"##                                                   ##\n"
+              f"##                   ( ͡° ͜ʖ ͡°) ✌                   ##\n"
               f"#######################################################")
     else:
         print(f"                 Guess the word or die                  ")
@@ -95,7 +102,7 @@ def output_result(dash, result, score):
         print(" " * l, *dash, " " * l)
         print(f"##                                                   ##\n"
               f"##                Score in the game: {str(score).ljust(3)}             ##\n"
-              f"##                                                   ##\n"
+              f"##                 ¯\_( ͡° ͜ʖ ͡°)_/¯                 ##\n"
               f"#######################################################")
 
 
@@ -114,6 +121,7 @@ def get_end(score, num_attempt, counter_letters, mistake):
         print()
         print(f"You were wrong {mistake} times. Your score: {score}")
 
+# main
 
 lets_play()
 phrase = get_phrase(store)
@@ -126,13 +134,14 @@ num_attempt = 0
 attempt_result = 0
 mistake = 0
 score = 0
+old = []
 
 start_time = time.time()
 time_limit = counter_letters * 7
 
 while attempt_result != counter_letters:
     num_attempt += 1
-    dash, result = make_attempt(dash, phrase, num_attempt)
+    dash, result = make_attempt(dash, phrase, num_attempt, old)
     score, attempt_result, mistake = count_score(result, score, attempt_result, mistake)
     print("\n" * 100)
     output_result(dash, result, score)
@@ -145,4 +154,5 @@ if (time.time() - start_time) <= 30:
     score += 100
 
 get_end(score, num_attempt, counter_letters, mistake)
+
 
